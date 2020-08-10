@@ -191,7 +191,7 @@ class Landing extends Component {
                                     Great experience from NSquare.
                                     You get a lot of learning opportunities here.
                                     You have to Work hard to get it. Be prepared for everything.
-                                    ANd you might land the next big job.
+                                    And you might land the next big job.
                                     <br/>
                                     <br/>
                                     <p style={{fontWeight: 'bold'}}>
