@@ -117,27 +117,27 @@ class Landing extends Component {
                                     >
                                         <Input onChange={(e) => {
                                             this.setState({email: e.target.value})
-                                        }} placeholder="Email Address"/>
+                                        }} placeholder="Email Address (Required)"/>
                                         <br/>
                                         <br/>
                                         <Input onChange={(e) => {
                                             this.setState({name: e.target.value})
-                                        }} placeholder="Full Name"/>
+                                        }} placeholder="Full Name (Required)"/>
                                         <br/>
                                         <br/>
                                         <Input onChange={(e) => {
                                             this.setState({phone_number: e.target.value})
-                                        }} placeholder="Phone Number"/>
+                                        }} placeholder="Phone Number (Required)"/>
                                         <br/>
                                         <br/>
                                         <Input onChange={(e) => {
                                             this.setState({collage: e.target.value})
-                                        }} placeholder="School/University"/>
+                                        }} placeholder="School/University (Required)"/>
                                         <br/>
                                         <br/>
                                         <Input onChange={(e) => {
                                             this.setState({country: e.target.value})
-                                        }} placeholder="Country"/>
+                                        }} placeholder="Country (Required)"/>
                                         <br/>
                                         <br/>
                                         <Checkbox onChange={(e) => {
