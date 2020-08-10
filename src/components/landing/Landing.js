@@ -4,7 +4,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './css/landing.scss'
 import Modal from "antd/es/modal";
-import {signInUrl} from "../../config";
 
 class Landing extends Component {
 
@@ -78,9 +77,10 @@ class Landing extends Component {
                             {/*    Courses*/}
                             {/*</Button>*/}
                             <a href={"#tutor-header"}>
-                            <Button value="large" onClick={(e) => {}} className="buttons_top">
-                                Students
-                            </Button></a>
+                                <Button value="large" onClick={(e) => {
+                                }} className="buttons_top">
+                                    Students
+                                </Button></a>
                         </Space>
                     </Header>
                     <Content className="landing_content">
@@ -188,14 +188,14 @@ class Landing extends Component {
                                 <Card className="testimonial-card" hoverable={true}>
                                     <br/>
                                     <br/>
-                                    Amazing Tutors to Learn from, The Course is in depth and covers every corner of the
-                                    subject.
-                                    The Tutors are really invested into teaching and come from pretty amazing
-                                    backgrounds.
+                                    Great experience from NSquare.
+                                    You get a lot of learning opportunities here.
+                                    You have to Work hard to get it. Be prepared for everything.
+                                    ANd you might land the next big job.
                                     <br/>
                                     <br/>
                                     <p style={{fontWeight: 'bold'}}>
-                                        Anurag Sarkar - INDIA
+                                        Dilip - INDIA
                                     </p>
                                 </Card>
                                 <br/>
@@ -209,10 +209,11 @@ class Landing extends Component {
                                     subject.
                                     The Tutors are really invested into teaching and come from pretty amazing
                                     backgrounds.
+                                    I would like to thank everyone in the team for helping me out find a better job
                                     <br/>
                                     <br/>
                                     <p style={{fontWeight: 'bold'}}>
-                                        Anurag Sarkar - INDIA
+                                        Akshay - INDIA
                                     </p>
                                 </Card>
                                 <br/>
@@ -222,14 +223,15 @@ class Landing extends Component {
                                 <Card className="testimonial-card" hoverable={true}>
                                     <br/>
                                     <br/>
-                                    Amazing Tutors to Learn from, The Course is in depth and covers every corner of the
-                                    subject.
-                                    The Tutors are really invested into teaching and come from pretty amazing
-                                    backgrounds.
+                                    The journey with Nsquare team was awesome. The tutors know very well how to engage
+                                    students.
+                                    A special thanks to Saurav Sir for for clearing doubts even at odd times, he is
+                                    approachable at all hours of the day. I want to thanks
+                                    Anish Sir to make my nightmares ( DP problems) a cake walk.
                                     <br/>
                                     <br/>
                                     <p style={{fontWeight: 'bold'}}>
-                                        Anurag Sarkar - INDIA
+                                        Abhirup - INDIA
                                     </p>
                                 </Card>
                                 <br/>
@@ -239,8 +241,9 @@ class Landing extends Component {
                     </Content>
                     <br/>
                     <br/>
-                    <Footer className="landing_footer">
-
+                    {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                    <Footer className="landing_footer" style={{textAlign: 'center', color: 'white'}}>
+                        N Square ©2020 Created by NSquare.dev with ❤️
                     </Footer>
                 </Layout>
             </div>

@@ -9,7 +9,6 @@ class Homepage extends Component {
         return (
             <div>
                 <NavBar/>
-
                 <Row>
                     <Col span={8} style={{float:'center'}}>
                         <Card

@@ -8,7 +8,7 @@ function App() {
   return (
       <Router>
           <Route exact path={"/"} component={withRouter(Landing)} />
-          <Route exact path={"/home"} component={withRouter(Homepage)} />
+          {/*<Route exact path={"/home"} component={withRouter(Homepage)} />*/}
           {/*<Route exact path={"/book/edit/:id"} component={withRouter(EditBook)} />*/}
           {/*<Route exact path={"/home/:course"} component={CoursePage} />*/}
           {/*<Route exact path={"/:course/:id"} component={QuestionPage} />*/}
