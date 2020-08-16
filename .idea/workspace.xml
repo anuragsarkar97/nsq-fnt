@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4acd485e-587b-414e-ad9f-6bfa9d92f88f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/landing/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Landing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,7 @@
       <workItem from="1597037222237" duration="718000" />
       <workItem from="1597041755198" duration="313000" />
       <workItem from="1597594357113" duration="399000" />
-      <workItem from="1597598194518" duration="489000" />
+      <workItem from="1597598194518" duration="697000" />
     </task>
     <servers />
   </component>

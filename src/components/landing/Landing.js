@@ -52,7 +52,7 @@ class Landing extends Component {
         })
             .then(res => {
                 if (res.status >= 400 && res.status < 500) {
-                    message.error(`Ohho !!! some issues : ${res.body.json().message}`)
+                    message.error(`Ohho !!! some issues : ${res.json().message}`)
                 } else if (res.status >= 500) {
                     message.error("Ohho !!! something broke !")
                 } else {
