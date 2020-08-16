@@ -49,16 +49,16 @@ class Landing extends Component {
                 "country": this.state.country,
                 "consent": this.state.consent
             })
-        }).then(res => {
-            if (res.status >= 400) {
-                message.error("Ohho !!! some issues")
-            } else if (res.status >= 500) {
-                message.error("Ohho !!! something broke !")
-            }
         })
             .then(res => {
+                if (res.status >= 400 && res.status < 500) {
+                    message.error("Ohho !!! some issues")
+                } else if (res.status >= 500) {
+                    message.error("Ohho !!! something broke !")
+                } else {
+                    message.success("Awesome! Someone from the team will get to you :)")
+                }
                 this.setState({registerModalVisible: false, registerModalLoading: false});
-                message.success("Awesome! Someone from the team will get to you :)")
             })
             .catch(e => {
                 this.setState({registerModalLoading: false});
