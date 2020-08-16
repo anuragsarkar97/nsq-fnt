@@ -33,6 +33,7 @@ class Landing extends Component {
 
 
     handleRegisterOk = e => {
+        var x;
         this.setState({
             registerModalLoading: true,
         });
@@ -51,9 +52,16 @@ class Landing extends Component {
             })
         })
             .then(res => {
-                if (res.status >= 400 && res.status < 500) {
-                    message.error(`Ohho !!! some issues : ${res.json().message}`)
-                } else if (res.status >= 500) {
+                x = res.status;
+                console.log(x)
+                return res
+            })
+            .then(res => res.json())
+            .then(res => {
+                console.log(x)
+                if (x >= 400 && x < 500) {
+                    message.error(`Ohho !!! some issues : ${res.message}`)
+                } else if (x >= 500) {
                     message.error("Ohho !!! something broke !")
                 } else {
                     message.success("Awesome! Someone from the team will get to you :)")
