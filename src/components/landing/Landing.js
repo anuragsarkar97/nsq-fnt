@@ -49,6 +49,12 @@ class Landing extends Component {
                 "country": this.state.country,
                 "consent": this.state.consent
             })
+        }).then(res => {
+            if (res.status >= 400) {
+                message.error("Ohho !!! some issues")
+            } else if (res.status >= 500) {
+                message.error("Ohho !!! something broke !")
+            }
         })
             .then(res => {
                 this.setState({registerModalVisible: false, registerModalLoading: false});
