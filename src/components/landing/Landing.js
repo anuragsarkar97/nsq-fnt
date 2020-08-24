@@ -31,7 +31,8 @@ class Landing extends Component {
                 <Select.Option key="Data Science">Data Science</Select.Option>,
                 <Select.Option key="App Dev">App Dev</Select.Option>,
                 <Select.Option key="Cloud">Cloud</Select.Option>,
-                <Select.Option key="Design">Web Design</Select.Option>
+                <Select.Option key="Design">Web Design</Select.Option>,
+                <Select.Option key="JavaScript">JavaScript</Select.Option>
             ]
         };
     }
@@ -171,7 +172,7 @@ class Landing extends Component {
                                         }} placeholder="Country (Required)"/>
                                         <br/>
                                         <br/>
-                                        <Select mode="tags" style={{width: '100%'}} placeholder="Tags Mode"
+                                        <Select mode="tags" style={{width: '100%'}} placeholder="Select Skillset"
                                                 onChange={this.handleChange}>
                                             {this.state.children}
                                         </Select>
