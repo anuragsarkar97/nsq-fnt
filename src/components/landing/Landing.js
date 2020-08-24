@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Card, Checkbox, Col, Input, Layout, message, Row, Space} from 'antd';
+import {Button, Card, Checkbox, Col, Input, Layout, message, Row, Select, Space} from 'antd';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './css/landing.scss'
@@ -21,7 +21,18 @@ class Landing extends Component {
             phone_number: null,
             email: null,
             country: null,
-            consent: false
+            consent: false,
+            skills: [],
+            children: [
+                <Select.Option key="Python">Python</Select.Option>,
+                <Select.Option key="Java">Java</Select.Option>,
+                <Select.Option key="C++">C++</Select.Option>,
+                <Select.Option key="Web Development">Web Development</Select.Option>,
+                <Select.Option key="Data Science">Data Science</Select.Option>,
+                <Select.Option key="App Dev">App Dev</Select.Option>,
+                <Select.Option key="Cloud">Cloud</Select.Option>,
+                <Select.Option key="Design">Web Design</Select.Option>
+            ]
         };
     }
 
@@ -30,6 +41,11 @@ class Landing extends Component {
             registerModalVisible: true,
         });
     };
+
+    handleChange = (e) => {
+        console.log(e);
+        this.setState({skills: e})
+    }
 
 
     handleRegisterOk = e => {
@@ -48,7 +64,8 @@ class Landing extends Component {
                 "phone": this.state.phone_number,
                 "email": this.state.email,
                 "country": this.state.country,
-                "consent": this.state.consent
+                "consent": this.state.consent,
+                "skills": this.state.skills
             })
         })
             .then(res => {
@@ -152,6 +169,12 @@ class Landing extends Component {
                                         <Input onChange={(e) => {
                                             this.setState({country: e.target.value})
                                         }} placeholder="Country (Required)"/>
+                                        <br/>
+                                        <br/>
+                                        <Select mode="tags" style={{width: '100%'}} placeholder="Tags Mode"
+                                                onChange={this.handleChange}>
+                                            {this.state.children}
+                                        </Select>
                                         <br/>
                                         <br/>
                                         <Checkbox onChange={(e) => {
