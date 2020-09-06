@@ -122,7 +122,7 @@ class Landing extends Component {
                             <Col md={{span: 24, offset: 0, pull: 1}} lg={{span: 12, offset: 1}}
                                  xs={{span: 24, offset: 0, pull: 1}}>
                                 <div className="main_typo" aos="fade" data-aos="fade-up">
-                                    We are helping Students become better Software Engineers.
+                                    We are helping You become better Software Engineers.
                                 </div>
                                 <div className="space"></div>
                                 <div className="second_type" aos="fade" data-aos="fade-up">
