@@ -23,6 +23,7 @@ class Landing extends Component {
             country: null,
             consent: false,
             skills: [],
+            ref_code: "",
             children: [
                 <Select.Option key="Python">Python</Select.Option>,
                 <Select.Option key="Java">Java</Select.Option>,
@@ -66,7 +67,8 @@ class Landing extends Component {
                 "email": this.state.email,
                 "country": this.state.country,
                 "consent": this.state.consent,
-                "skills": this.state.skills
+                "skills": this.state.skills,
+                "ref_code": this.state.ref_code
             })
         })
             .then(res => {
@@ -178,6 +180,11 @@ class Landing extends Component {
                                         </Select>
                                         <br/>
                                         <br/>
+                                        <Input onChange={(e) => {
+                                            this.setState({ref_code: e.target.value})
+                                        }} placeholder="Referral Code "/>
+                                        <br/>
+                                        <br/>
                                         <Checkbox onChange={(e) => {
                                             this.setState({consent: e.target.checked})
                                         }}>Connect with you over phone/Email</Checkbox>
@@ -261,7 +268,8 @@ class Landing extends Component {
                                 <Card className="testimonial-card" hoverable={true}>
                                     <br/>
                                     <br/>
-                                    The journey with Nsquare team was awesome. The tutors know very well how to engage
+                                    The journey with Nsquare team was awesome. The tutors know very well and how to
+                                    engage
                                     students.
                                     A special thanks to Saurav Sir for for clearing doubts even at odd times, he is
                                     approachable at all hours of the day. I want to thanks
